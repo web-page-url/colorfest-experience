@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Holi festival colors
+				holi: {
+					purple: '#8B5CF6',
+					pink: '#D946EF',
+					orange: '#F97316',
+					blue: '#0EA5E9',
+					yellow: '#FCD34D',
+					green: '#10B981'
 				}
 			},
 			borderRadius: {
@@ -70,25 +80,57 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-scale': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' }
+				},
+				'color-rotate': {
+					'0%': { filter: 'hue-rotate(0deg)' },
+					'100%': { filter: 'hue-rotate(360deg)' }
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'color-splash': {
+					'0%': { transform: 'scale(0)', opacity: '0.8' },
+					'50%': { opacity: '0.5' },
+					'100%': { transform: 'scale(2)', opacity: '0' }
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'bounce-light': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-scale': 'pulse-scale 3s ease-in-out infinite',
+				'color-rotate': 'color-rotate 10s linear infinite',
+				'fade-in-up': 'fade-in-up 0.5s ease-out',
+				'color-splash': 'color-splash 1s ease-out forwards',
+				'spin-slow': 'spin-slow 15s linear infinite',
+				'bounce-light': 'bounce-light 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'holi-gradient': 'linear-gradient(90deg, #D946EF 0%, #8B5CF6 50%, #0EA5E9 100%)'
 			}
 		}
 	},
